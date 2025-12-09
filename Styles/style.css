@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=Raleway:ital,wght@0,800;1,800&display=swap');
+
+:root{
+    --cor-primaria: #F8F0E5;
+    --cor-secundaria: #EADBC8;
+    --cor-terciaria: #DAC0A3;
+    --cor-quaternaria: #102C57;
+    --cor-hover-menu: #426cac;
+    --cor-dropdown-menu: #173460;
+    --cor-de-texto: #000; 
+    --fonte-primaria: "Raleway", sans-serif;
+    --fonte-secundaria: "IBM Plex Mono", monospace;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body { 
+    box-sizing: border-box;
+    background-color: var(--cor-primaria);
+    color: var(--cor-de-texto);
+}
+
+.cabecalho {
+    background-color: var(--cor-quaternaria);
+    padding: 2% 0% 0% 10%;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 80px;
+    padding: 1% 0%;
+}
+
+.cabecalho__menu__link {
+    font-family: var(--fonte-primaria);
+    font-size: 0.94rem;
+    font-weight: 300;
+    color: var(--cor-terciaria);
+    text-decoration: none;
+}
+
+.apresentacao {
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.apresentacao__2 {
+    padding: 5% 10%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.apresentacao__conteudo {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__2{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 5%;
+}
+
+.apresentacao__conteudo__deck {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apresentacao__conteudo__titulo {
+    font-size: 2.75rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quaternaria);
+
+}
+
+.apresentacao__conteudo__titulo__2 {
+    font-size: 2.75rem;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-quaternaria);
+}
+
+.apresentacao__conteudo__texto {
+    font-size: 0.875rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-de-texto);
+}
+
+.apresentacao__conteudo__texto__2{
+    font-size: 0.975rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-de-texto);
+}
+
+.apresentacao__conteudo__citacao {
+    font-size: 0.625rem;
+    font-family: var(--fonte-secundaria);
+    color: var(--cor-de-texto);
+    font-style: italic;
+}
+
+.apresentacao__links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    flex-wrap: wrap;
+
+}
+
+.apresentacao__links__link {
+    background-color: var(--cor-terciaria);
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    gap: 16px;
+    width: 378;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: 21.5px 0;
+    color: var(--cor-quaternaria);
+    font-family: var(--fonte-primaria);
+    border-radius: 16px;
+
+}
+
+.apresentacao__links__link:hover {
+    background-color: var(--cor-secundaria);
+}
+
+nav {
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    font-size: 0.94rem;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    font-family: var(--fonte-primaria);
+    color: var(--cor-terciaria);
+
+}
+
+.dropDown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropDown .dropButton {
+    font-size: 0.94rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    padding: 14px;
+    background-color: inherit;
+    margin: 0;
+
+}
+
+nav a:hover, .dropDown:hover .dropButton {
+    background-color: var(--cor-hover-menu);
+}
+
+.dropLinks{
+    display: none;
+    position: absolute;
+    background-color: var(--cor-dropdown-menu);
+    min-height: 160px;
+    z-index: 1;
+}
+
+.dropDown:hover .dropLinks {
+    display: grid;
+}
+
+.imagem__principal {
+    width: 50%;
+}
+
+.rodape {
+    background-color: var(--cor-quaternaria);
+    font-family: var(--fonte-secundaria);
+    display: flex;
+    justify-content: center;
+    color: var(--cor-terciaria);
+}
+
+@media (max-width: 1200px) {
+    .cabecalho {
+        padding: 10%;
+    }
+
+    .cabecalho__menu {
+        justify-content: center;
+    }
+    
+    .apresentacao {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+
+    .apresentacao__2 {
+        flex-direction: column;
+        padding: 5%;
+    }
+
+    .apresentacao__conteudo {
+        width: auto;
+    }
+
+    .apresentacao__links__link {
+        width: auto;
+    }
+}
