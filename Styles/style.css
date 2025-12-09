@@ -229,7 +229,12 @@ nav a:hover, .dropDown:hover .dropButton {
         width: auto;
     }
 
-    .apresentacao__links__link {
-        width: auto;
+ .apresentacao__links__link {
+        width: 50%;
+
+    }
+
+    .imagem__colecao {
+        width: 70%;
     }
 }
